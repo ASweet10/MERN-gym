@@ -1,1 +1,1 @@
-# MERN-gym
+# Mernstack Fitness Tracker
