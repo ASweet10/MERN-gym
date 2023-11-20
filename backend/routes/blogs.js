@@ -6,7 +6,8 @@ const requireAuth = require('../middleware/requireAuth')
 
 const router = express.Router() //Get access to express router
 
-router.use(requireAuth) // Make sure user authenticated before getBlogs etc. can be accessed
+// Not used for blogs; Non-logged-in users can still view
+// router.use(requireAuth) // Make sure user authenticated before getBlogs etc. can be accessed
 
 router.get('/', getBlogs)  // GET all blogs (.../api/blog/)
 router.get('/:id', getBlog)  // GET single blog

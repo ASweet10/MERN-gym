@@ -4,21 +4,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "poppins": ['Poppins', 'sans']
+        "oswald": ['Oswald', 'sans']
       }
     },
     colors: {
-      "primary": "#9f0000",
-      "secondary": "#ad2d3a",
+      "primary": "#9F0000",
+      "secondary": "#AD2D3A",
       "shadow": "#BBBBBB",
       "error": "#E7195A",
-      "bg": "#DDDDDD",
-      "nav-bg": "#EEEEEE",
       "black": "#000000",
-      "white": "#d6d6d6",
-      "grey": "#b5b5b5",
+      "white": "#FFFFFF",
       "darkGrey": "#202020",
+      "lightGrey": "#787878",
+      "grey": "#D4D4D4",
     },
   },
   plugins: [],
 }
+

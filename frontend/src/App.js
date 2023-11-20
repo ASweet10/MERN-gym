@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 import toast, { Toaster } from 'react-hot-toast'
+import './index.css'
 
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
@@ -9,6 +10,7 @@ import Signup from './pages/Signup'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Classes from './pages/Classes'
+import Rates from './pages/Rates'
 import Footer from './components/Footer'
 
 function App() {
@@ -22,15 +24,16 @@ function App() {
         <div className="w-full h-full my-0 mx-auto">
           <Routes>
             {/* If user exists, route to proper page. If not, route to login */}
-            <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
-            <Route path="/about" element={user ? <About /> : <Navigate to="/login" />} />
-            <Route path="/blog" element={user ? <Blog /> : <Navigate to="/login" />} />
-            <Route path="/classes" element={user ? <Classes /> : <Navigate to="/login" />} />
+            <Route path="/" element={ <Home /> }/>
+            <Route path="/about" element={ <About /> } />
+            <Route path="/blog" element={ <Blog /> } />
+            <Route path="/classes" element={ <Classes /> } />
+            <Route path="/rates" element={ <Rates /> } />
             <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
             <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" />} />
           </Routes>
         </div>
-        { user && <Footer /> }
+        <Footer />
       </BrowserRouter>
     </div>
   );

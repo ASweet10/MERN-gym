@@ -10,7 +10,7 @@ const AccordionExample = ( props ) => {
         <div className='flex flex-col py-4 w-5/6 md:w-2/3'>
             <hr className='border-b border-grey'></hr>
             <div className='text-black flex justify-between items-center pt-3 pb-4 cursor-pointer' onClick={() => setOpen(!open)}>
-                <h3 className='text-xl font-semibold'>{props.question}</h3>
+                <h3 className='text-xl font-semibold px-1'>{props.question}</h3>
 
                 { open 
                     ? (
@@ -25,7 +25,7 @@ const AccordionExample = ( props ) => {
                   )
                 }
             </div>
-            {open && (<p className='text-lg'>{props.answer}</p>)}  
+            {open && (<p className='text-base px-2'>{props.answer}</p>)}  
 
         </div>
         <hr className="h-[1px] my-8 bg-gray-700 border-0"></hr>

@@ -1,0 +1,116 @@
+import React from 'react'
+import { VscDebugBreakpointLog } from 'react-icons/vsc'
+import { BsCurrencyDollar } from 'react-icons/bs'
+import { IoFastFoodOutline, IoSunny, IoShirtSharp, IoShieldCheckmark } from "react-icons/io5"
+import { MdOutlineGroups, MdMoneyOff } from "react-icons/md"
+import { FaPerson } from "react-icons/fa6"
+import { CgSmartHomeWashMachine } from "react-icons/cg"
+import { GiCycle } from "react-icons/gi"
+import { LiaMoneyBillWaveSolid } from "react-icons/lia"
+
+const Rates = () => {
+    const premiumPerks = [
+        { id: 1, text: "Ellipticals, stair climbers, treadmills"},
+        { id: 2, text: "Free weights and weight machines"},
+        { id: 3, text: "Locker rooms with private showers"},
+        { id: 4, text: "Personal trainers"},
+    ]
+
+  return (
+    <div className='flex w-full h-full'>
+      <div className='flex flex-col justify-center items-center w-full h-full px-4 md:px-32 py-20'>
+        <h1 className='text-5xl font-bold text-center pb-8'>Rates</h1>
+        <div className='flex flex-col md:flex-row gap-8'>
+          
+          {/* Premium */}
+          <div className='border-2 border-lightGrey rounded-lg p-6 w-[350px] md:w-96'>
+            <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Premium</h1>
+            <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$44.99</h1>/mo</h2>
+            <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
+            <hr class="h-px my-4 bg-lightGrey border-0"></hr>
+            <div>
+              <div className='flex gap-2 items-center'>
+                <MdMoneyOff className='text-lg text-black' />
+                <p>No start-up fee</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <BsCurrencyDollar className='text-lg text-black' />
+                <p>$45 annual fee</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <IoShieldCheckmark className='text-lg text-black' />
+                <p>Cancel Anytime</p>
+              </div>
+            </div>
+            <hr class="h-px my-4 bg-lightGrey border-0"></hr>
+            <div className='flex flex-col gap-3'>
+              <h1 className='text-xl font-bold'>Premium Perks</h1>
+              <div className='flex gap-2 items-center'>
+                <GiCycle className='text-lg text-black' />
+                <p>Unlimited Gym Access</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <MdOutlineGroups className='text-lg text-black' />
+                <p>8 Free Classes Per Month</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <FaPerson className='text-lg text-black' />
+                <p>Bring a Guest Anytime</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <IoSunny className='text-lg text-black' />
+                <p>Use of Tanning Beds</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <CgSmartHomeWashMachine className='text-lg text-black' />
+                <p>Use of Body Scanner</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <IoFastFoodOutline className='text-lg text-black' />
+                <p>Discounts on Merch and Snack Bar</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Classic */}
+          <div className='border-2 border-lightGrey rounded-lg p-6 w-[350px] md:w-96'>
+            <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Classic</h1>
+            <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$29.99</h1>/mo</h2>
+            <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
+            <hr class="h-px my-4 bg-lightGrey border-0"></hr>
+            <div>
+              <div className='flex gap-2 items-center'>
+                <BsCurrencyDollar className='text-lg text-black' />
+                <p>$25 start-up fee</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <BsCurrencyDollar className='text-lg text-black' />
+                <p>$45 annual fee</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <IoShieldCheckmark className='text-lg text-black' />
+                <p>Cancel Anytime</p>
+              </div>
+            </div>
+            <hr class="h-px my-4 bg-lightGrey border-0"></hr>
+            <div className='flex flex-col gap-3'>
+              <h1 className='text-xl font-bold'>Premium Perks</h1>
+              <div className='flex gap-2 items-center'>
+                <GiCycle className='text-lg text-black' />
+                <p>Unlimited Gym Access</p>
+              </div>
+              <div className='flex gap-2 items-center'>
+                <FaPerson className='text-lg text-black' />
+                <p>3 Guest Passes Per Month</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+export default Rates

@@ -31,27 +31,23 @@ const BlogDetails = ({ blog }) => {
     }
 
     return(
-        <div className="text my-5 p-5 relative">
+        <div className="text my-5 relative">
             <div className='flex flex-col md:flex-row justify-left items-center mb-2'>
-                {/* <img src={'https://dr04meiydmd3r.cloudfront.net/blog-stretch.jpg'} alt="" className='h-68 w-80' /> */}
-                <img src={blog.src} alt="" className='h-68 w-80' />
-                <div className='flex flex-col py-4 md:px-10 text-left'>
+                <img src={blog.src} alt="" className='h-68 w-80 cursor-pointer' />
+                <div className='flex flex-col py-4 md:px-8 text-left'>
                     <p className='text-sm'>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>{/* AddSuffix: Adds 'ago' after time */}
-                    <h4 className='font-bold text-2xl py-3 hover:cursor-pointer hover:underline'>{blog.title}</h4>
-                    <p className='text-lg'>{blog.content.substring(0, 100)}</p>
-                    <Link to="/:id" className='pt-8'>
-                        <p className='text-sm font-bold hover:cursor-pointer hover:underline'>Read More</p>
-                    </Link>
+                    <Link to="/" className='font-bold text-2xl py-3 hover:cursor-pointer hover:underline'>{blog.title}</Link>
+                    <p className='text-sm'>{blog.content.substring(0, 150)}...</p>
+                    <Link to="/" className='pt-8 text-sm font-bold hover:cursor-pointer hover:underline'>Read More</Link>
                 </div>
-                { user.email === "test@test.com" && 
-                    <span className="p-3 bg-white rounded-full cursor-pointer" onClick={handleClick}>
-                        <AiFillDelete className='text-2xl text-primary' />
-                    </span> 
-                }
-
+                { user && (
+                    user.email === "test@test.com" && (
+                        <span className="p-3 bg-white rounded-full cursor-pointer" onClick={handleClick}>
+                            <AiFillDelete className='text-2xl text-primary' />
+                        </span> 
+                    )
+                )}
             </div>
-
-
         </div>
     )
 }

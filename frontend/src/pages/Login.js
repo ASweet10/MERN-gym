@@ -13,7 +13,7 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center w-full h-screen'>
-            <form className="flex flex-col my-12 mx-auto p-5 bg-nav-bg rounded-md" onSubmit={ handleSubmit }>
+            <form className="flex flex-col my-12 mx-auto p-5 bg-grey rounded-md" onSubmit={ handleSubmit }>
                 <h3 className='text-xl font-semibold text-primary text-center'>Log In with your Email</h3>
 
                 <input
