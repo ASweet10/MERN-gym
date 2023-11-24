@@ -5,31 +5,41 @@ import {FaMapMarkedAlt} from 'react-icons/fa'
 import {MdGroups} from 'react-icons/md'
 
 const MembershipSection = () => {
-  const cardData = [
-    { id: "1", title: "Gyms wherever you are", desc: "We have over 2000 locations in the USA.", icon: FaMapMarkedAlt },
-    { id: "2", title: "Smart Pass System", desc: "Your membership card works at all SmartFitness locations.", icon: BsFillCreditCardFill },
-    { id: "3", title: "Group Classes", desc: "We offer 22 different group classes.", icon: MdGroups },
-  ]
 
   return (
-    <div className='justify-center items-center py-8'>
-        <h1 className='text-4xl font-bold text-center'>Membership Perks</h1>
+    <div className='flex flex-col justify-center items-center w-full h-full bg-white'>
+      <h1 className='text-5xl font-bold text-center text-darkGrey py-8 uppercase'>Memberships</h1>
+      <div className='flex flex-col md:flex-row justify-center items-center w-full h-full px-4 md:px-32 pt-10 pb-20 gap-4'>
 
-        <div className='flex flex-col md:flex-row gap-4 justify-center items-center py-16 md:px-12'>
-            { cardData.map((card) => {
-                return(
-                  <div key={card.id} className='flex flex-col justify-center items-center rounded-md p-4 h-80 w-2/3 md:w-1/3 bg-black text-white'>
-                      <card.icon className='text-primary text-3xl'/>
-                      <h1 className='text-xl font-semibold text-center text-white pt-6'>{card.title}</h1>
-                      <p className='py-4 px-4 text-lg font-normal text-center'>{card.desc}</p>
-                  </div>
-                )
-            })}
+        {/* Classic */}
+        <div className='border-2 border-lightGrey rounded-lg p-6 w-[350px] md:w-96 h-80 text-darkGrey'>
+          <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Classic (Monthly)</h1>
+          <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$24.99</h1>/mo</h2>
+          <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
+          <h1 className='text-xl font-semibold pt-4'>Standard membership that includes unlimited gym access.</h1>
+          <hr class="h-px my-4 bg-lightGrey border-0"></hr>
+
+          <div className='flex w-full justify-end pt-2'>
+            <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary text-white font-bold text-center gap-4'>Learn More</Link>
+          </div>
         </div>
 
-        <div className='flex justify-center pt-12'>
-            <Link to="/about" className='rounded-md bg-black text-white px-16 py-6 font-bold text-2xl'>Learn More</Link>
+        
+        {/* Premium */}
+        <div className='bg-darkGrey rounded-lg p-6 w-[350px] md:w-96 h-80 text-white'>
+          <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Premium</h1>
+          <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$44.99</h1>/mo</h2>
+          <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
+          <h1 className='text-xl font-semibold px-3 pt-4'>Premium membership includes discounts</h1>
+          <hr class="h-px my-4 bg-lightGrey border-0"></hr>
+
+          <div className='flex w-full justify-end pt-2'>
+            <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary text-white font-bold text-center gap-4'>Learn More</Link>
+          </div>
         </div>
+
+      </div>
+
     </div>
   )
 }

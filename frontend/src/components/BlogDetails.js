@@ -36,9 +36,9 @@ const BlogDetails = ({ blog }) => {
                 <img src={blog.src} alt="" className='h-68 w-80 cursor-pointer' />
                 <div className='flex flex-col py-4 md:px-8 text-left'>
                     <p className='text-sm'>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>{/* AddSuffix: Adds 'ago' after time */}
-                    <Link to="/" className='font-bold text-2xl py-3 hover:cursor-pointer hover:underline'>{blog.title}</Link>
+                    <Link className='font-bold text-2xl py-3 hover:cursor-pointer hover:underline'>{blog.title}</Link>
                     <p className='text-sm'>{blog.content.substring(0, 150)}...</p>
-                    <Link to="/" className='pt-8 text-sm font-bold hover:cursor-pointer hover:underline'>Read More</Link>
+                    <Link className='pt-8 text-sm font-bold hover:cursor-pointer hover:underline'>Read More</Link>
                 </div>
                 { user && (
                     user.email === "test@test.com" && (

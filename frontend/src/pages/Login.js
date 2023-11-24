@@ -13,7 +13,7 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center w-full h-screen'>
-            <form className="flex flex-col my-12 mx-auto p-5 bg-grey rounded-md" onSubmit={ handleSubmit }>
+            <form className="flex flex-col my-12 mx-auto p-5" onSubmit={ handleSubmit }>
                 <h3 className='text-xl font-semibold text-primary text-center'>Log In with your Email</h3>
 
                 <input
@@ -31,7 +31,7 @@ const Login = () => {
                     placeholder='Password'
                 />
                 <p className='text-sm mb-4 text-right cursor-pointer'>Forgot your password?</p>
-                <button disabled={isLoading} className="bg-primary text-nav-bg font-semibold p-3 rounded-md cursor-pointer">
+                <button disabled={isLoading} className="bg-primary text-white text-lg font-bold p-3 rounded-md cursor-pointer">
                     Log In
                 </button>
                 {error && // If error exists, create error div

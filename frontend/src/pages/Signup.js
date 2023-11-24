@@ -14,8 +14,8 @@ const Signup = () => {
 
     return(
         <div className='flex justify-center items-center w-full h-screen'>
-            <form className="flex flex-col my-12 mx-auto p-5 bg-nav-bg rounded-md max-w-[400px]" onSubmit={ handleSubmit }>
-                <h3 className='text-xl font-semibold text-primary text-center'>New to SmartFitness? Register free</h3>
+            <form className="flex flex-col my-12 mx-auto p-5 max-w-[400px]" onSubmit={ handleSubmit }>
+                <h3 className='text-xl font-semibold text-primary text-center'>New to EliteFitness? Register free</h3>
 
                 <input
                     type="email" // Expects email, not string
@@ -32,7 +32,7 @@ const Signup = () => {
                     placeholder='Password'
                 />
                 <Link to="/login"><p className='text-sm mb-4 text-right cursor-pointer'>Already have an account?</p></Link>
-                <button disabled={isLoading} className="bg-primary text-nav-bg font-semibold p-3 rounded-md cursor-pointer">
+                <button disabled={isLoading} className="bg-primary text-white text-lg font-bold p-3 rounded-md cursor-pointer">
                     Register
                 </button>
                 {error && // If error exists, create error div
