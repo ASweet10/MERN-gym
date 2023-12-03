@@ -9,7 +9,7 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true //Can't signup with same email, must be unique
+        unique: true // Must not already exist
     },
     password: {
         type: String,
@@ -31,8 +31,7 @@ userSchema.statics.signup = async function(email, password) {
         throw Error('Password not strong enough')
     }
 
-    // "This" refers to model currently being created
-    const exists = await this.findOne({ email })
+    const exists = await this.findOne({ email }) // This: model currently being created
     if(exists) {
         throw Error('Email already in use!')
     }

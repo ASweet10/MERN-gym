@@ -25,8 +25,8 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Links */}
-            <div className='hidden md:flex gap-8'>
-                <div className='flex flex-row items-center gap-8 text-white'>
+            <div className='hidden md:flex'>
+                <div className='flex flex-row items-center gap-10 text-white'>
                     <Link to="/about" className='font-semibold uppercase'>About</Link>
                     <Link to="/classes" className='font-semibold uppercase'>Classes</Link>
                     <Link to="/rates" className='font-semibold uppercase'>Rates</Link>
