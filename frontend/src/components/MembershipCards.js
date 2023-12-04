@@ -19,7 +19,7 @@ const MembershipSection = () => {
           <h1 className='text-xl font-semibold pt-4 h-16'>Standard unlimited gym access</h1>
           <hr class="h-px my-4 bg-lightGrey border-0"></hr>
 
-          <div className='flex w-full justify-end pt-20'>
+          <div className='flex w-full justify-end pt-4 md:pt-20'>
             <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary text-white font-bold text-center gap-4'>Learn More</Link>
           </div>
         </div>
@@ -33,7 +33,7 @@ const MembershipSection = () => {
           <h1 className='text-xl font-semibold pt-4 h-16'>Extra perks and discounts on merchandise</h1>
           <hr class="h-px my-4 bg-lightGrey border-0"></hr>
 
-          <div className='flex w-full justify-end pt-20'>
+          <div className='flex w-full justify-end pt-4 md:pt-20'>
             <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary text-white font-bold text-center gap-4'>Learn More</Link>
           </div>
         </div>

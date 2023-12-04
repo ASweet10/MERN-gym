@@ -30,7 +30,7 @@ const Login = () => {
                     className='w-full p-3 mt-2 mb-2 border-2 border-solid border-nav-bg rounded-md'
                     placeholder='Password'
                 />
-                <p className='text-sm mb-4 text-right cursor-pointer'>Forgot your password?</p>
+                <p className='text-sm mb-4 text-right text-lightBlue cursor-pointer'>Forgot your password?</p>
                 <button disabled={isLoading} className="bg-primary text-white text-lg font-bold p-3 rounded-md cursor-pointer">
                     Log In
                 </button>
