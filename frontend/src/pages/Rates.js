@@ -23,7 +23,7 @@ const Rates = () => {
         <div className='flex flex-col md:flex-row gap-4 items-center'>
           
           {/* Classic Monthly */}
-          <div className='border-2 border-lightGrey rounded-lg p-3 w-80'>
+          <div className='border-2 border-lightGrey rounded-lg p-3 md:h-[520px] w-80'>
             <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Classic (Monthly)</h1>
             <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$24.99</h1>/mo</h2>
             <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
@@ -57,7 +57,7 @@ const Rates = () => {
           </div>
 
           {/* Classic Annual */}
-          <div className='border-2 border-lightGrey rounded-lg p-3 w-80'>
+          <div className='border-2 border-lightGrey rounded-lg p-3 md:h-[520px] w-80'>
             <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Classic (Annual)</h1>
             <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$19.99</h1>/mo</h2>
             <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
@@ -95,7 +95,7 @@ const Rates = () => {
           </div>
 
           {/* Premium */}
-          <div className='text-white bg-darkGrey rounded-lg p-3 w-80'>
+          <div className='text-white bg-darkGrey rounded-lg p-3 md:h-[520px] w-80'>
             <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Premium</h1>
             <h2 className='flex text-xl font-bold text-left items-end'><h1 className='text-4xl text-primary'>$34.99</h1>/mo</h2>
             <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>
