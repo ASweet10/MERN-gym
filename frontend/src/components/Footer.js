@@ -13,7 +13,7 @@ const Footer = () => {
   ]
   return (
     <div className='flex flex-col h-full w-full text-darkGrey px-8 py-8 bg-white'>
-        <div className='flex flex-col justify-start md:flex-row gap-8 lg:gap-24 px-3 md:px-24 lg:px-60 py-8 lg:pt-24'>
+        <div className='flex flex-col justify-start md:flex-row gap-8 lg:gap-16 px-3 md:px-24 lg:px-40 py-8 lg:pt-24'>
 
             <div className='flex flex-col text-left gap-2'>
               <h1 className='text-2xl font-bold'>Contact</h1>
@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className='flex flex-col justify-start md:px-24 pb-8'>
+            <div className='flex flex-col justify-start md:px-16 pb-8'>
               <div className='flex flex-col items-left gap-2'>
                 <h1 className='text-2xl font-bold'>Hours</h1>
                 <p className='text-sm'><strong>Mon - Fri:</strong> 5am - 9pm</p>
