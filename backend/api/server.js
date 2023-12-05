@@ -1,9 +1,10 @@
-require('dotenv').config()
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, './.env')})
 
 const express = require('express')
 const mongoose = require("mongoose")
-const blogRoutes = require('./routes/blogs')
-const userRoutes = require('./routes/user')
+const blogRoutes = require('../routes/blogs')
+const userRoutes = require('../routes/user')
 
 const app = express() // Express app
 
@@ -16,6 +17,7 @@ app.use((req, res, next) => {
 })
 
 // Routes
+app.get('/', (req, res) => res.status(200).json({ message: 'Backend up and running'}))
 app.use('/api/blog', blogRoutes)
 app.use('/api/user', userRoutes)
 
