@@ -17,7 +17,6 @@ app.use((req, res, next) => {
 })
 
 // Routes
-app.get('/', (req, res) => res.status(200).json({ message: 'Backend up and running'}))
 app.use('/api/blog', blogRoutes)
 app.use('/api/user', userRoutes)
 
@@ -32,4 +31,3 @@ mongoose.connect(process.env.MONGDB_URI)
     .catch((error) => {
         console.log(error)
     })
-
