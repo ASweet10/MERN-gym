@@ -3,3 +3,5 @@ Troubleshooting issues and solutions
 1b. - Also shows '<' '<!DOCTYPE>...' is invalid JSON error
 Solution:
 Add "proxy": "http://localhost:5000", to package.json to proxy to express server port
+
+-Changed proxy to url for backend deployment, was localhost:5000
