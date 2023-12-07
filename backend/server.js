@@ -5,15 +5,11 @@ const express = require('express')
 const mongoose = require("mongoose")
 const blogRoutes = require('./routes/blogs')
 const userRoutes = require('./routes/user')
-const cors = require('cors')
-const router = require('./routes/blogs')
 
 const app = express() // Express app
 
 // Express Middleware
 app.use(express.json()) // Checks incoming requests
-app.use(cors())
-app.use(cors({origin: 'https://mern-gym.vercel.app'}))
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
