@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="font-poppins">
-      <BrowserRouter>
+      <BrowserRouter basename="/index.html">
         <div><Toaster/></div>
         <Navbar />
         <div className="w-full h-full my-0 mx-auto">
