@@ -8,10 +8,11 @@ import BlogForm from '../components/BlogForm'
 const Blog = () => {
     const { blogs, dispatch } = useBlogContext()
     const { user } = useAuthContext()
+    const baseURL = "https://mern-gym-backend.onrender.com"
 
     useEffect(() => {
         const fetchBlogs = async () => {
-            const response = await fetch('/api/blog', {
+            const response = await fetch(`${baseURL}/api/blog`, {
                 /* Not needed, removed requireAuth from blogs route
                 headers: {
                     'Authorization': `Bearer ${user.token}`
