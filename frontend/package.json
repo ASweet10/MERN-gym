@@ -1,6 +1,5 @@
 {
   "proxy": "https://mern-gym-backend.onrender.com",
-  "homepage": "https://mern-gym-frontend.onrender.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
