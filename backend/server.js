@@ -10,6 +10,13 @@ const app = express() // Express app
 
 // Express Middleware
 app.use(express.json()) // Checks incoming requests
+app.use(cors(
+    {
+        origin: {"https://mern-gym-frontend-asweet10.vercel.app"},
+        methods: {"POST, GET, PATCH, DELETE"},
+        credentials: true
+    }
+))
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
