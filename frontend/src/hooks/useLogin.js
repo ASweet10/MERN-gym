@@ -13,7 +13,10 @@ export const useLogin = () => {
 
         const response = await fetch(`${baseURL}/api/user/login`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
             body: JSON.stringify({ email, password })
         })
         //Success: Return information with JWT

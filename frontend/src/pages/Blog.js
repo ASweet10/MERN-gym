@@ -13,11 +13,10 @@ const Blog = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             const response = await fetch(`${baseURL}/api/blog`, {
-                /* Not needed, removed requireAuth from blogs route
                 headers: {
-                    'Authorization': `Bearer ${user.token}`
+                    'Access-Control-Allow-Origin': '*',
+                    //'Authorization': `Bearer ${user.token}`    //  Not needed, removed requireAuth from blogs route
                 }
-                */
             })
             const json = await response.json() // Array of blog objects
             if(response.ok) {

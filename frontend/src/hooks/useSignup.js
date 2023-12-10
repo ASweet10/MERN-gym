@@ -13,7 +13,10 @@ export const useSignup = () => {
 
         const response = await fetch(`${baseURL}/api/user/signup`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
             body: JSON.stringify({ email, password })
         })
         const json = await response.json() // Success: Return info with JWT. Fail: Return error message
