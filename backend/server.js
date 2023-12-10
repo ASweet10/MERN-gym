@@ -13,8 +13,9 @@ const app = express() // Express app
 app.use(express.json()) // Checks incoming requests
 app.use(cors(
     {
-        origin: ["https://mern-gym-frontend-asweet10.vercel.app"],
-        methods: ["POST, GET, PATCH, DELETE"],
+        //origin: ["https://mern-gym-frontend-asweet10.vercel.app"],
+        origin: '*',
+        methods: ['GET', 'POST', 'PATCH', 'DELETE'],
         credentials: true
     }
 ))
