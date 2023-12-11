@@ -32,7 +32,7 @@ const Blog = () => {
 
     //Dependency array parameter, only fires once (avoid multiple calls) 
     // Dispatch is a dependency of useEffect as it's an external function
-    })
+    }, [])
 
     return (
         <div className='flex flex-col w-full h-full justify-center items-center bg-bg py-16 px-8 lg:px-36 xl:px-60'>
