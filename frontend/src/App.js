@@ -12,6 +12,7 @@ import Blog from './pages/Blog'
 import Classes from './pages/Classes'
 import Rates from './pages/Rates'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const { user } = useAuthContext()
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="font-poppins">
       <BrowserRouter>
+        <ScrollToTop />
         <div><Toaster/></div>
         <Navbar />
         <div className="w-full h-full my-0 mx-auto">

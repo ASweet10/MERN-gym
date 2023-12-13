@@ -23,15 +23,10 @@ const Blog = () => {
                 dispatch({type: 'SET_BLOGS', payload: json}) // Payload: array of blogs
             }
         }
-        /*
-        if( user ) {
-            fetchBlogs()
-        }
-        */
+        // if( user ) { fetchBlogs() }
        fetchBlogs()
 
-    //Dependency array parameter, only fires once (avoid multiple calls) 
-    // Dispatch is a dependency of useEffect as it's an external function
+    //Empty dependency array; only fires on component mount/dismount 
     }, [])
 
     return (
