@@ -1,6 +1,5 @@
 import homeHero from '../images/weights-hero.jpg'
 import MembershipCards from '../components/MembershipCards'
-import FAQs from '../components/FAQs'
 import Hero from '../components/Hero'
 import TextAndImage from '../components/TextAndImage'
 
