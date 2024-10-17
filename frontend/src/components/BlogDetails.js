@@ -15,7 +15,6 @@ const BlogDetails = ({ blog }) => {
         if( !user ) {
             return
         }
-
         const response = await fetch('/api/blog/' + blog._id, {
             method: 'DELETE',
             headers: {

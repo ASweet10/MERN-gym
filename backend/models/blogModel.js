@@ -11,4 +11,4 @@ const blogSchema = new Schema ({
 
 }, {timestamps: true})
 
-module.exports = mongoose.model("Blog", blogSchema)  // Model applies schema; Explorde module then call functions i.e. Blog.find()
+module.exports = mongoose.model("Blog", blogSchema)  // Model applies schema; Export module then call functions i.e. Blog.find()

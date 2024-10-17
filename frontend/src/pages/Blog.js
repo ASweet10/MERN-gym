@@ -25,14 +25,12 @@ const Blog = () => {
         }
         // if( user ) { fetchBlogs() }
        fetchBlogs()
-
-    //Empty dependency array; only fires on component mount/dismount 
     }, [])
 
     return (
         <div className='flex flex-col w-full h-full justify-center items-center bg-bg py-16 px-8 lg:px-36 xl:px-60'>
-            <h1 className='text-6xl text-black font-bold text-center pb-8 pt-8'>
-                <span className='text-primary'>EliteFitness </span>Blog
+            <h1 className='text-4xl md:text-6xl text-black font-bold text-center pb-8 pt-8'>
+                <span className='text-primary'>EliteFitness</span>Blog
             </h1>
             <div className="flex flex-col gap-8">
                 {user && (
