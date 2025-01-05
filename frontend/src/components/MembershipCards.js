@@ -7,8 +7,8 @@ import {MdGroups} from 'react-icons/md'
 const MembershipSection = () => {
 
   return (
-    <div className='flex flex-col justify-center items-center w-full h-full py-20 bg-white'>
-      <h1 className='text-5xl font-bold text-center text-darkGrey py-8 uppercase'>Memberships</h1>
+    <div className='flex flex-col justify-center items-center w-full h-full py-20 bg-grey'>
+      <h1 className='text-5xl font-bold text-center text-darkGrey pt-8 uppercase'>Memberships</h1>
       <div className='flex flex-col md:flex-row justify-center items-center w-full h-full px-4 md:px-32 py-12 gap-12'>
 
         {/* Classic */}
@@ -20,7 +20,7 @@ const MembershipSection = () => {
           <hr className="h-px mt-4 bg-lightGrey border-0"></hr>
 
           <div className='flex w-full justify-end pt-6 md:pt-20'>
-            <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary text-white font-bold text-center gap-4'>Learn More</Link>
+            <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary hover:bg-secondary text-white font-bold text-center gap-4'>Learn More</Link>
           </div>
         </div>
 
@@ -34,7 +34,7 @@ const MembershipSection = () => {
           <hr className="h-px mt-12 md:mt-6 bg-lightGrey border-0"></hr>
 
           <div className='flex w-full justify-end pt-6 md:pt-20'>
-            <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary text-white font-bold text-center gap-4'>Learn More</Link>
+            <Link to="/rates" className='flex text-lg py-3 px-6 rounded-full bg-primary hover:bg-secondary text-white font-bold text-center gap-4'>Learn More</Link>
           </div>
         </div>
 

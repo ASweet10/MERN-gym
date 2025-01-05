@@ -6,7 +6,6 @@ import cardio from '../images/about-cardio.jpg'
 import cardioTwo from '../images/about-cardio2.jpg'
 import sauna from '../images/about-sauna.jpg'
 import helpdesk from '../images/about-helpdesk.jpg'
-import lockers from '../images/about-lockers.jpg'
 
 const About = () => {
     const aboutData = [
@@ -30,10 +29,9 @@ const About = () => {
         { id: 4, src: benchPress },
         { id: 5, src: boxingBags },
         { id: 6, src: sauna },
-        { id: 8, src: lockers },
     ]
   return (
-    <div className='flex flex-col items-center w-full h-full px-4 md:px-8 py-20 bg-bg'>
+    <div className='flex flex-col items-center w-full h-full px-4 md:px-8 py-20 bg-grey'>
         <h1 className='text-4xl md:text-5xl font-bold text-center'>About</h1>
         <h1 className='text-2xl font-semibold text-left py-4'><span className='text-primary'>EliteFitness</span> features:</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-4'>
@@ -51,7 +49,7 @@ const About = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2 px-4'>
             { aboutGallery.map((item) => {
               return(
-                  <img className='cursor-pointer' src={item.src} alt="" />
+                  <img className='rounded-lg' src={item.src} alt="" />
               )
             })}
         </div>

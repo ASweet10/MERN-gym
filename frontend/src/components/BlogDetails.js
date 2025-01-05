@@ -32,7 +32,7 @@ const BlogDetails = ({ blog }) => {
     return(
         <div className="text my-5 relative">
             <div className='flex flex-col md:flex-row justify-left items-center mb-2'>
-                <img src={blog.src} alt="" className='h-68 w-80 cursor-pointer' />
+                <img src={blog.src} alt="" className='h-68 w-80 md:w-96 cursor-pointer rounded-lg' />
                 <div className='flex flex-col py-4 md:px-8 text-left'>
                     <p className='text-sm'>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>{/* AddSuffix: Adds 'ago' after time */}
                     <Link className='font-bold text-2xl py-3 hover:cursor-pointer hover:underline'>{blog.title}</Link>

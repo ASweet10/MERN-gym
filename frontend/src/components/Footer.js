@@ -8,12 +8,12 @@ const Footer = () => {
   const footerLogoData = [
     {id: 1, logo: BiLogoFacebook, link: "https://www.facebook.com" },
     {id: 2, logo: BiLogoInstagram, link: "https://www.instagram.com" },
-    {id: 3, logo: FaXTwitter, link: "https://twitter.com/?lang=en" },
+    {id: 3, logo: FaXTwitter, link: "https://x.com" },
     {id: 4, logo: BiLogoYoutube, link: "https://www.youtube.com" },
   ]
   return (
-    <div className='flex flex-col h-full w-full text-darkGrey px-8 py-8 bg-white'>
-        <div className='flex flex-col justify-start md:flex-row gap-8 lg:gap-16 px-3 md:px-12 py-8 lg:pt-24'>
+    <div className='flex flex-col h-full w-full text-darkGrey px-8 py-8 bg-grey'>
+        <div className='flex flex-col md:flex-row justify-start md:justify-center md:items-center gap-8 lg:gap-16 px-3 md:px-12 py-8 lg:pt-24'>
 
             <div className='flex flex-col text-left gap-2'>
               <h1 className='text-2xl font-bold'>Contact</h1>
@@ -35,7 +35,7 @@ const Footer = () => {
                 { footerLogoData.map((item) => {
                   return(
                     <a key={item.id} href={item.link} target="_blank" className="rounded-full w-14 h-14 md:w-12 md:h-12 flex items-center justify-center cursor-pointer">
-                      <item.logo className='text-3xl' />
+                      <item.logo className='text-3xl hover:text-primary' />
                     </a>
                   )
                 })}

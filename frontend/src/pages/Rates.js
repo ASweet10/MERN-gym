@@ -17,7 +17,7 @@ const Rates = () => {
     ]
 
   return (
-    <div className='flex w-full h-full'>
+    <div className='flex w-full h-full bg-grey'>
       <div className='flex flex-col justify-center items-center w-full h-full px-4 md:px-32 py-20'>
         <h1 className='text-5xl font-bold text-center pb-8'>Rates</h1>
         <div className='flex flex-col md:flex-row gap-4 items-center'>
@@ -30,27 +30,27 @@ const Rates = () => {
             <hr className="h-px my-4 bg-lightGrey border-0"></hr>
             <div>
               <div className='flex gap-2 items-center'>
-                <BsCurrencyDollar className='text-lg text-black' />
+                <BsCurrencyDollar className='text-xl text-black' />
                 <p>$25 start-up fee</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <BsCurrencyDollar className='text-lg text-black' />
+                <BsCurrencyDollar className='text-xl text-black' />
                 <p>$45 annual fee</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <IoShieldCheckmark className='text-lg text-black' />
+                <IoShieldCheckmark className='text-xl text-black' />
                 <p>Cancel Anytime</p>
               </div>
             </div>
             <hr className="h-px my-4 bg-lightGrey border-0"></hr>
             <div className='flex flex-col gap-3'>
-              <h1 className='text-xl font-bold'>Premium Perks</h1>
+              <h1 className='text-xl font-bold'>Perks</h1>
               <div className='flex gap-2 items-center'>
-                <GiCycle className='text-lg text-black' />
+                <GiCycle className='text-xl text-black' />
                 <p>Unlimited Gym Access</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <FaPerson className='text-lg text-black' />
+                <FaPerson className='text-xl text-black' />
                 <p>3 Guest Passes Per Month</p>
               </div>
             </div>
@@ -64,31 +64,31 @@ const Rates = () => {
             <hr className="h-px my-4 bg-lightGrey border-0"></hr>
             <div>
               <div className='flex gap-2 items-center'>
-                <MdMoneyOff className='text-lg text-black' />
+                <MdMoneyOff className='text-xl text-black' />
                 <p>No start-up fee</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <BsCurrencyDollar className='text-lg text-black' />
-                <p>$45 annual fee</p>
+                <BsCurrencyDollar className='text-xl text-black' />
+                <p>$40 annual fee</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <IoShieldCheckmark className='text-lg text-black' />
+                <IoShieldCheckmark className='text-xl text-black' />
                 <p>Cancel Anytime</p>
               </div>
             </div>
             <hr className="h-px my-4 bg-lightGrey border-0"></hr>
             <div className='flex flex-col gap-3'>
-              <h1 className='text-xl font-bold'>Premium Perks</h1>
+              <h1 className='text-xl font-bold'>Perks</h1>
               <div className='flex gap-2 items-center'>
-                <GiCycle className='text-lg text-black' />
+                <GiCycle className='text-xl text-black' />
                 <p>Unlimited Gym Access</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <FaPerson className='text-lg text-black' />
+                <FaPerson className='text-xl text-black' />
                 <p>5 Guest Passes Per Month</p>
               </div>
               <div className='flex gap-2 items-center'>
-                <MdOutlineGroups className='text-lg' />
+                <MdOutlineGroups className='text-xl' />
                 <p>2 Free Classes Per Month</p>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Rates = () => {
               </div>
               <div className='flex gap-2 items-center'>
                 <BsCurrencyDollar className='text-lg' />
-                <p>$45 annual fee</p>
+                <p>$30 annual fee</p>
               </div>
               <div className='flex gap-2 items-center'>
                 <IoShieldCheckmark className='text-lg' />

@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "oswald": ['Oswald', 'sans']
+        "oswald": ['Oswald', 'sans'],
+        "DMSans": ['DMSans', 'sans'],
       }
     },
     colors: {
@@ -16,9 +17,10 @@ module.exports = {
       "black": "#000000",
       "white": "#FFFFFF",
       "darkGrey": "#202020",
+      "darkGreyHover": "#404040",
       "lightBlue": "#1877F2",
       "lightGrey": "#bdb4b3",
-      "grey": "#D4D4D4",
+      "grey": "#e8e8e8",
     },
   },
   plugins: [],
