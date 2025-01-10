@@ -18,7 +18,7 @@ function App() {
   const { user } = useAuthContext()
 
   return (
-    <div className="font-poppins">
+    <div className="font-poppins bg-grey">
       <BrowserRouter>
         <ScrollToTop />
         <div><Toaster/></div>
