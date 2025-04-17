@@ -31,25 +31,24 @@ const About = () => {
         { id: 6, src: sauna },
     ]
   return (
-    <div className='flex flex-col items-center w-full h-full px-4 md:px-8 py-20 bg-grey'>
+    <div className='flex flex-col items-center w-full h-full px-4 md:px-8 py-28 bg-grey'>
         <h1 className='text-4xl md:text-5xl font-bold text-center'>About</h1>
-        <h1 className='text-2xl font-semibold text-left py-4'><span className='text-primary'>EliteFitness</span> features:</h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-4'>
+        <h1 className='text-2xl font-semibold text-left py-4'><span className='text-yellow-800'>EliteFitness</span> features:</h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 py-12'>
           { aboutData.map((item) => {
               return(
                   <div className='flex flex-row justify-left items-center gap-1' key={item.id} >
-                    <VscDebugBreakpointLog className='text-xl md:text-2xl text-primary' />
+                    <VscDebugBreakpointLog className='text-xl md:text-2xl text-yellow-800' />
                     <h1 className='text-lg md:text-xl font-semibold'>{item.text}</h1>
                   </div>
               )
           })}
         </div>
 
-        <h1 className='text-3xl font-bold text-left py-8'>Gallery</h1>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-2 px-4'>
-            { aboutGallery.map((item) => {
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-2 p-4'>
+            { aboutGallery.map((item, index) => {
               return(
-                  <img className='rounded-lg' src={item.src} alt="" />
+                <img key={index} className='rounded-lg' src={item.src} alt="" />
               )
             })}
         </div>

@@ -28,7 +28,7 @@ const Blog = () => {
     }, [])
 
     return (
-        <div className='flex flex-col w-full h-full justify-center items-center py-12 px-8 lg:px-36 xl:px-60 bg-grey'>
+        <div className='flex flex-col w-full h-full justify-center items-center py-20 px-8 lg:px-36 xl:px-60 bg-grey'>
             <h1 className='text-4xl md:text-6xl text-black font-bold text-center pb-8 pt-8'>
                 <span className='text-primary'>EliteFitness</span> Blog
             </h1>

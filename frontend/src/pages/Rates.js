@@ -18,7 +18,7 @@ const Rates = () => {
 
   return (
     <div className='flex w-full h-full bg-grey'>
-      <div className='flex flex-col justify-center items-center w-full h-full px-4 md:px-32 py-20'>
+      <div className='flex flex-col justify-center items-center w-full h-full px-4 md:px-32 py-28'>
         <h1 className='text-5xl font-bold text-center pb-8'>Rates</h1>
         <div className='flex flex-col md:flex-row gap-4 items-center'>
           
@@ -95,7 +95,7 @@ const Rates = () => {
           </div>
 
           {/* Premium */}
-          <div className='text-white bg-darkGrey rounded-lg p-3 md:h-[520px] w-80'>
+          <div className=' text-white border-2 border-yellow-800 bg-gray-900 rounded-lg p-3 md:h-[520px] w-80'>
             <h1 className='text-2xl font-bold text-left pb-2 uppercase'>Premium</h1>
             <h2 className='flex text-xl font-bold text-left items-end'><span className='text-4xl text-primary'>$34.99</span>/mo</h2>
             <p className='text-left text-xs pl-1 pt-1'>plus taxes & fees</p>

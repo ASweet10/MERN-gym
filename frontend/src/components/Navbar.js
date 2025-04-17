@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
 import { BsPersonCircle } from 'react-icons/bs'
@@ -11,60 +11,64 @@ const Navbar = () => {
     const { logout } = useLogout()
     const { user } = useAuthContext()
     const [ navOpen, setNavOpen ] = useState(false)
+    const location = useLocation()
 
     const handleLogoutClick = () => {
         setNavOpen(!navOpen)
         logout()
     }
 
+    console.log(window.location.pathname)
+
     return (
-        <header className="flex w-full z-50 justify-between items-center h-24 md:h-16 px-6 md:px-20 py-4 bg-black text-white">
-            <div className='hidden md:flex gap-8'>
-                <Link to="/" className='flex flex-row items-center gap-2 group'>
-                    <h1 className='text-2xl md:text-3xl font-bold text-secondary font-DMSans'>EliteFitness</h1>
-                    <GiWeightLiftingUp className='text-center text-secondary group-hover:text-primary text-2xl' />
-                </Link>
-                <div className='flex flex-row items-center gap-8 text-white font-semibold uppercase'>
-                    <Link to="/about">About</Link>
-                    <Link to="/classes">Classes</Link>
-                    <Link to="/rates">Rates</Link>
-                    <Link to="/blog">Blog</Link>
+        <header className={`
+            absolute w-full z-40 justify-between items-center h-24 md:h-20 p-6 md:px-20 bg-transparent
+            ${location.pathname === '/' ? 'text-white' : 'text-black'}
+            `}>
+            <div className='hidden md:flex justify-between'>
+                <div className='flex gap-8'>
+                    <Link to="/" className='flex flex-row items-center gap-2 group'>
+                        <h1 className='text-2xl md:text-3xl font-bold text-yellow-700 font-DMSans'>EliteFitness</h1>
+                        <GiWeightLiftingUp className='text-center text-yellow-700 group-hover:text-yellow-800 text-2xl' />
+                    </Link>
+                    <div className='flex flex-row items-center gap-8 font-semibold uppercase z-50'>
+                        <Link className='hover:text-yellow-800' to="/about">About</Link>
+                        <Link className='hover:text-yellow-800' to="/classes">Classes</Link>
+                        <Link className='hover:text-yellow-800' to="/rates">Rates</Link>
+                        <Link className='hover:text-yellow-800' to="/blog">Blog</Link>
+                    </div>
                 </div>
-            </div>
 
-            {/* Desktop Links */}
-            {/*
-            <div className='hidden md:flex'>
-                <div className='flex flex-row items-center gap-8 text-white'>
-                    <Link to="/about" className='font-semibold uppercase'>About</Link>
-                    <Link to="/classes" className='font-semibold uppercase'>Classes</Link>
-                    <Link to="/rates" className='font-semibold uppercase'>Rates</Link>
-                    <Link to="/blog" className='font-semibold uppercase'>Blog</Link>
-                </div>
-            </div>
-            */}
-
-            {/* Desktop User/Login Section */}
-            <div className='hidden md:flex gap-8'>
-                { user 
-                    ? (
-                        <div className='flex'>
-                            <div className='flex flex-row items-center gap-2 cursor-pointer'>
-                                <BsPersonCircle className='text-2xl' />
-                                <span className='font-bold'>{user.email}</span>
+                <div className='flex gap-8'>
+                    { user 
+                        ? (
+                            <div className='flex'>
+                                <div className='flex flex-row items-center gap-2 cursor-pointer'>
+                                    <BsPersonCircle className='text-2xl' />
+                                    <span className='font-bold'>{user.email}</span>
+                                </div>
+                                <button onClick={handleLogoutClick} className='py-2 px-6 md:ml-8 rounded-md font-bold bg-yellow-800'>
+                                    Log out
+                                </button>
                             </div>
-                            <button onClick={handleLogoutClick} className='py-2 px-6 md:ml-8 rounded-md font-bold bg-primary text-white'>
-                                Log out
-                            </button>
-                        </div>
-                    ) 
-                    : (
-                        <div className='flex gap-4'>
-                            <Link to="/login" className='py-2 px-6 rounded-md font-bold bg-transparent text-white'>Login</Link>
-                            <Link to="/signup" className='py-2 px-6 rounded-md font-bold bg-primary hover:bg-secondary text-white'>Become a Member</Link>
-                        </div>
-                    )
-                }
+                        ) 
+                        : (
+                            <div className='flex gap-4'>
+                                <Link to="/login" className={`text-lg py-2 px-6 rounded-md font-bold bg-transparent
+                                    ${location.pathname === '/' ? 'text-white' : 'text-black'}`}
+                                >
+                                    Login
+                                </Link>
+                                <Link to="/signup" 
+                                    className={`text-lg py-2 px-6 rounded-sm font-bold bg-transparent duration-300 hover:bg-yellow-800 border-2 border-yellow-800
+                                        ${location.pathname === '/' ? 'text-white' : 'text-black'}`}
+                                >
+                                    Join Today
+                                </Link>
+                            </div>
+                        )
+                    }
+                </div>
             </div>
 
             {/* Mobile */}

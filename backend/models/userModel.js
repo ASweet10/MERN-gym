@@ -39,7 +39,7 @@ userSchema.statics.signup = async function(email, password) {
     //Salt is string of random characters added to password before it's hashed
     // Extra layer of security
     //  -Argument is cost of salt, higher value = more security but more wait for users
-    const salt = await bcrypt.genSalt(10)
+    const salt = await bcrypt.genSalt(10) // Salt: random characters added to password before it's hashed; Argument cost Higher value = more security but longer wait
 
     const hash = await bcrypt.hash(password, salt)
 
