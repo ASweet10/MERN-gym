@@ -15,7 +15,7 @@ const BlogForm = () => {
     let date = useCurrentDate()
     //const email = user.email
     const [error, setError] = useState(null)
-    const [emptyFields, setEmptyFields] = useState([])
+    //const [emptyFields, setEmptyFields] = useState([])
 
 
     const handleSubmit = async (event) => {
@@ -44,7 +44,7 @@ const BlogForm = () => {
 
         if(!response.ok) {
             setError(json.error) // Return error property from code 400 json from blogController
-            setEmptyFields(json.emptyFields) // Set empty fields from blogController
+            //setEmptyFields(json.emptyFields) // Set empty fields from blogController
         }
 
         if(response.ok) {
@@ -54,7 +54,7 @@ const BlogForm = () => {
             setSrc('')
             date = ''
             setError(null) //Set error null if one existed
-            setEmptyFields([])
+            //setEmptyFields([])
             dispatch({type: 'CREATE_BLOG', payload: json})
             toast.success('Added ' + title)
         }

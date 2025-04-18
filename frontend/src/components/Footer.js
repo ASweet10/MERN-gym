@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { AiFillPhone, AiOutlineMail } from 'react-icons/ai'
-import { BiLocationPlus, BiLogoFacebook, BiLogoInstagram, BiLogoYoutube } from 'react-icons/bi'
+import { BiLogoFacebook, BiLogoInstagram, BiLogoYoutube } from 'react-icons/bi'
 import { FaXTwitter } from 'react-icons/fa6'
 const Footer = () => {
 
@@ -34,7 +32,7 @@ const Footer = () => {
             <div className='flex flex-row gap-6 pt-3 md:pb-3'>
                 { footerLogoData.map((item) => {
                   return(
-                    <a key={item.id} href={item.link} target="_blank" className="rounded-full w-14 h-14 md:w-12 md:h-12 flex items-center justify-center cursor-pointer">
+                    <a key={item.id} href={item.link} target="blank" className="rounded-full w-14 h-14 md:w-12 md:h-12 flex items-center justify-center cursor-pointer">
                       <item.logo className='text-3xl hover:text-yellow-800' />
                     </a>
                   )

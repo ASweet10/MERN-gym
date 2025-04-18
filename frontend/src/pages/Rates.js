@@ -1,20 +1,12 @@
 import React from 'react'
-import { VscDebugBreakpointLog } from 'react-icons/vsc'
 import { BsCurrencyDollar } from 'react-icons/bs'
-import { IoFastFoodOutline, IoSunny, IoShirtSharp, IoShieldCheckmark } from "react-icons/io5"
+import { IoFastFoodOutline, IoSunny, IoShieldCheckmark } from "react-icons/io5"
 import { MdOutlineGroups, MdMoneyOff } from "react-icons/md"
 import { FaPerson } from "react-icons/fa6"
 import { CgSmartHomeWashMachine } from "react-icons/cg"
 import { GiCycle } from "react-icons/gi"
-import { LiaMoneyBillWaveSolid } from "react-icons/lia"
 
 const Rates = () => {
-    const premiumPerks = [
-        { id: 1, text: "Ellipticals, stair climbers, treadmills"},
-        { id: 2, text: "Free weights and weight machines"},
-        { id: 3, text: "Locker rooms with private showers"},
-        { id: 4, text: "Personal trainers"},
-    ]
 
   return (
     <div className='flex w-full h-full bg-grey'>

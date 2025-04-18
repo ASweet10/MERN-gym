@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import pilates from '../images/group-pilates.jpg'
 import yoga from '../images/group-yoga.jpg'
 import boxing from '../images/group-boxing.jpg'
@@ -44,12 +43,12 @@ const Classes = () => {
                         </div>
                       </div>
 
-                      <div className="absolute w-full h-full gap-4 top-0 z-100 opacity-80 bg-darkGrey justify-center items-center text-center text-white hidden group-hover/card:flex flex-col">
+                      <div className="absolute w-full h-full gap-4 top-0 z-100 bg-darkGrey justify-center items-center text-center text-white hidden group-hover/card:flex flex-col">
                         <p className="mx-6 md:mx-16 pt-20 md:pt-0">
                           Lorem ipsum odor amet, consectetuer adipiscing elit. Tortor euismod ipsum dignissim quisque in. 
                           Litora conubia rutrum facilisis finibus pharetra sed.
                         </p>
-                        <button className='py-2 px-4 text-xl md:text-base rounded-md font-bold bg-white text-black'>
+                        <button className='py-2 px-4 text-xl md:text-base rounded-md font-bold bg-white text-black opacity-80'>
                             <div className='flex flex-row items-center gap-2 group/button'>
                               <h1>Sign Up</h1>
                               <MdArrowOutward className='text-yellow-800 text-2xl md:text-xl group-hover/button:rotate-45 duration-200'/>

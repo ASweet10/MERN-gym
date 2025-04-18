@@ -2,8 +2,7 @@ import { useBlogContext } from '../hooks/useBlogContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
-import { AiFillDelete, AiFillCheckCircle } from 'react-icons/ai'
-import bike from '../images/pexels-bike.jpg'
+import { AiFillDelete } from 'react-icons/ai'
 
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
@@ -30,7 +29,7 @@ const BlogDetails = ({ blog }) => {
     }
 
     return(
-        <div className="text my-5 relative">
+        <div className="my-5 relative">
             <div className='flex flex-col md:flex-row justify-left items-center mb-2'>
                 <img src={blog.src} alt="" className='h-68 w-80 md:w-96 cursor-pointer rounded-lg' />
                 <div className='flex flex-col py-4 md:px-8 text-left'>
