@@ -74,12 +74,12 @@ const Navbar = () => {
             {/* Mobile */}
             <nav className='flex md:hidden justify-center items-center'>
                 { navOpen && (
-                    <div className={`${navOpen ? "opacity-100" : "opacity-0" } fixed z-30 top-0 bottom-0 left-0 right-0 w-full h-screen bg-black transition-opacity duration-500`}>
+                    <div className={`${navOpen ? "opacity-100" : "opacity-0" } fixed z-30 top-0 bottom-0 left-0 right-0 w-full h-screen bg-gray-900 transition-opacity duration-500`}>
                         <div className='flex flex-col gap-6 py-20 items-center text-white justify-between'>
                             { user && (
                                 <div className='flex flex-row items-center gap-2 cursor-pointer'>
-                                    <BsPersonCircle className='text-4xl' />
-                                    <span className='font-bold text-2xl'>{user.email}</span>
+                                    <BsPersonCircle className='text-4xl text-yellow-700' />
+                                    <span className='font-bold text-2xl text-yellow-700'>{user.email}</span>
                                 </div>
                             )}
 
@@ -98,7 +98,7 @@ const Navbar = () => {
                                 ) : (
                                     <div className='flex flex-col gap-4 pt-16'>
                                         <Link to="/login" onClick={() => setNavOpen(!navOpen)} className='px-8 text-xl rounded-md font-bold text-center bg-darkGreyHover text-white'>Login</Link>
-                                        <Link to="/signup" onClick={() => setNavOpen(!navOpen)} className='px-8 text-xl rounded-md font-bold text-center bg-primary text-white'>Become a Member</Link>
+                                        <Link to="/signup" onClick={() => setNavOpen(!navOpen)} className='px-8 text-xl rounded-md font-bold text-center bg-primary text-yellow-700'>Become a Member</Link>
                                     </div>
                                 )
                             }

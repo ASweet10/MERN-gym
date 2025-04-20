@@ -48,7 +48,7 @@ const MembershipSection = () => {
         { cardInfo.map((card) => {
           return (
               <div key={card.id} className={`rounded-md p-6 w-[350px] md:w-72 h-96 ${card.backgroundAndText}`}>
-                <h1 className='text-2xl font-bold text-center pb-2 uppercase'>{card.title}</h1>
+                <h1 className='text-3xl md:text-2xl font-bold text-center pb-2 uppercase'>{card.title}</h1>
                 <h2 className='text-lg font-bold text-center items-end'><span className='text-4xl text-primary'>${card.price}</span>/mo</h2>
                 
                 <hr className="h-px my-4 bg-lightGrey border-0"></hr>
@@ -61,8 +61,8 @@ const MembershipSection = () => {
                   })}
                 </div>
 
-                <div className='flex w-full justify-center pt-6 md:pt-12'>
-                  <Link to="/rates" className='flex text-sm py-2 px-4 rounded-sm bg-yellow-800 hover:bg-yellow-700 text-white text-center'>Learn More</Link>
+                <div className='flex w-full justify-center md:pt-12'>
+                  <Link to="/rates" className='flex text-sm py-3 px-6 rounded-sm bg-yellow-800 hover:bg-yellow-700 text-white text-center'>Learn More</Link>
                 </div>
               </div>
               )

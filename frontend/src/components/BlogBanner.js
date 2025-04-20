@@ -21,7 +21,7 @@ const BlogBanner = () => {
   }, [])
 
   return (
-    <div className='flex flex-col justify-center items-center w-full h-full py-20 bg-grey'>
+    <div className='flex flex-col justify-center items-center w-full h-full py-28 bg-grey'>
       <h1 className='text-5xl font-bold text-center text-yellow-900 pb-8 uppercase'>Latest News</h1>
       
       <div className="flex flex-col md:flex-row mx-10 md:gap-4 xl:mx-80">

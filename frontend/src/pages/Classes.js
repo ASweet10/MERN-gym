@@ -7,7 +7,7 @@ import circuit from '../images/group-circuit.jpg'
 import cardio from '../images/group-cardio.jpg'
 import powerlift from '../images/group-powerlifting.jpg'
 import karate from '../images/group-karate.jpg'
-import { MdArrowOutward } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md"
 import { IoTimeOutline } from 'react-icons/io5'
 
 
