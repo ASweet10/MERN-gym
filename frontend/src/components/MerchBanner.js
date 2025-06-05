@@ -10,7 +10,7 @@ const MerchBanner = () => {
       id: 0,
       src: nutrition,
       title: "Nutrition",
-      content: "Nourish your gym gains. Proper nutrition is the foundation of a healthy lifestyle. Ask about out our new line of protein shakes and supplements.",
+      content: "Nourish your gym gains. Proper nutrition is the foundation of a healthy lifestyle. Ask about our new line of protein shakes and supplements.",
     },
     {
       id: 1,
@@ -31,7 +31,7 @@ const MerchBanner = () => {
                 <img src={item.src} alt="" className='cursor-pointer rounded-sm' />
                 <div className='flex flex-col py-4 px-2 h-52 md:h-40'>
                   <Link className='font-bold text-2xl md:text-4xl py-3 hover:cursor-pointer'>{item.title}</Link>
-                  <p className=''>{item.content}</p>
+                  <p className='text-lg'>{item.content}</p>
                 </div>
                 <Link className='flex gap-2 items-center group/button py-4 px-6 rounded-sm bg-transparent duration-300 hover:bg-yellow-800 border-yellow-800 border-2 text-black hover:text-white font-bold text-center mt-2'>
                   Shop Now
