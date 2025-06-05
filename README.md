@@ -1,4 +1,5 @@
-# EliteFitness gym website
+# EliteFitness
+Gym website
 
 ## Features
 - Secure user authentication using JWT and bcrypt
